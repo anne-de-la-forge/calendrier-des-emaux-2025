@@ -290,4 +290,13 @@ window.qcmData = [
         ],
         correctAnswer: "C"
     }
+    // 🎁 ENTRÉE MANQUANTE POUR LE JOUR 25 🎁
+    {
+        day: 25,
+        title: "Jour du Grand Tirage",
+        question: "Joyeux Noël !",
+        image: "chad-madden-SUTfFCAHV_A-unsplash.jpg", 
+        options: [], 
+        correctAnswer: null 
+    }
 ];
