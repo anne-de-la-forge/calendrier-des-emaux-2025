@@ -270,7 +270,7 @@ window.qcmData = [
         day: 23,
         title: "Parcours d’Artiste",
         question: "Avant de se consacrer à l’émaillage d’art, quelle profession exerçait Anne de la Forge ?",
-        image: "image-jour-23-poincon-maitre.jpg",
+        image: "Ecumes-pieces-aimantees-Anne-de-La-FORGE-copie.jpg",
         options: [
             { text: "A. Restauratrice de meubles anciens", value: "A" },
             { text: "B. Juriste", value: "B" },
@@ -282,7 +282,7 @@ window.qcmData = [
         day: 24,
         title: "Le Secret d'AD Émaux",
         question: "Quel est l'ingrédient secret qui garantit la valeur et l'authenticité de chaque pièce d'émail ?",
-        image: "ECUME-OCEAN-BLEU-3-panneaux®-Anne-de-La-Forge-scaled.jpg",
+        image: "Totems-bouleaux-Anne-de-La-Forge-.jpg",
         options: [
             { text: "A. La production en série", value: "A" },
             { text: "B. L'utilisation de la robotisation", value: "B" },
