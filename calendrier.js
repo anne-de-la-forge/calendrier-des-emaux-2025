@@ -133,7 +133,7 @@ function openPopupWithData(data) {
                 </p>
                 
                 <div style="padding: 20px; background-color: var(--light-bg); border: 2px solid var(--accent-gold); border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                    <p style="font-size: 1.2em; margin: 5px 0;">Le tirage au sort aura lieu ce **25 décembre**.</p>
+                    <p style="font-size: 1.2em; margin: 5px 0;">Le tirage au sort aura lieu ce 25 décembre.</p>
                     <p style="font-size: 1.2em; margin: 5px 0; font-weight: 700; color: var(--primary-marine);">Le gagnant sera contacté personnellement par e-mail début janvier !</p>
                 </div>
                 
