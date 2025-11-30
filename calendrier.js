@@ -6,7 +6,7 @@ const APP_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxWrdi9dEkmfFFgS
 console.log("Script Calendrier AD Émaux chargé.");
 
 // -------------------------------------------------------------------------------------------------------
-// NOUVELLE FONCTION : Envoi de données vers Google Apps Script (avec consentement RGPD)
+// FONCTIONS ASYNCHRONES / TRAITEMENT DU FORMULAIRE (DOIVENT ÊTRE EN HAUT)
 // -------------------------------------------------------------------------------------------------------
 async function submitToGSheet(dayNumber, userEmail, userResponse, isCorrect, rgpdConsent) {
     const formData = new FormData();
@@ -23,7 +23,6 @@ async function submitToGSheet(dayNumber, userEmail, userResponse, isCorrect, rgp
             body: formData
         });
 
-        // Comme nous utilisons 'no-cors', on ne peut pas vérifier response.ok. 
         // Si le fetch réussit sans erreur réseau, on considère l'envoi réussi.
         return { success: true };
 
@@ -200,8 +199,6 @@ function openPopupWithData(data) {
             <input type="text" name="hp_field" class="honeypot" tabindex="-1" autocomplete="off">
             <input type="email" name="email" placeholder="Votre e-mail (obligatoire)" required>
 
-            // calendrier.js (Nouveau code de remplacement)
-
             <div class="rgpd-checkbox-container">
                 <input type="checkbox" id="rgpd_check" name="rgpd_consent" value="true" required> 
                 <label for="rgpd_check">J'accepte d'être recontacté(e) et de recevoir la newsletter.</label>
@@ -252,6 +249,9 @@ const doorClickHandler = function(e) {
 };
 
 
+// -------------------------------------------------------------------------------------------------------
+// BLOC D'INITIALISATION DU DOM (NE CONTIENT PAS LES FONCTIONS GLOBALES)
+// -------------------------------------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
     const doors = document.querySelectorAll('.door');
     
@@ -291,23 +291,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 const doorBack = door.querySelector('.door-back');
                 doorBack.innerHTML = `<img src="${data.image}" alt="Image du jour ${day}" style="width:100%; height:100%; object-fit:cover;">`;
             }
-            // ❌ door.style.pointerEvents = 'none'; est géré par la classe .submitted via le CSS et le return dans doorClickHandler.
         }
 
         // 3. Ajout des écouteurs de clic
         door.addEventListener('click', doorClickHandler);
     });
-    
+}); // <--- FIN CORRECTE DU DOMContentLoaded
+
+// -------------------------------------------------------------------------------------------------------
+// FONCTIONS GLOBALES (DÉPLACÉES ICI POUR ÊTRE ACCESSIBLES PAR LE HTML ONCLICK)
+// -------------------------------------------------------------------------------------------------------
+
 // FONCTIONS MODALES PRINCIPALES
 window.closePopup = function() {
     document.getElementById('door-overlay').classList.remove('active');
 };
 
+// Logique de clic à l'extérieur (si l'ID est 'door-overlay' ou 'reglement-overlay')
 window.closePopupIfClickedOutside = function(e) {
-    if (e.target.id === 'door-overlay') {
+    const targetId = e.target.id;
+    // Permet de fermer si on clique sur l'overlay pour le quiz ou le règlement
+    if (targetId === 'door-overlay') {
         window.closePopup();
-    }
+    } else if (targetId === 'reglement-overlay') {
+        window.closeReglement();
+    } 
+    // NE RIEN FAIRE si c'est 'gdpr-info-overlay' pour forcer l'utilisation du bouton "J'ai compris"
 };
+
 
 // Fonctionnalité Règlement
 window.openReglement = function() {
@@ -325,7 +336,7 @@ window.resetCalendar = function() {
         location.reload();
     }
 };
-    
+    
 // Fonctionnalité Pop-up d'Information RGPD
 window.openGdprInfo = function() {
     document.getElementById('gdpr-info-overlay').classList.add('active');
@@ -334,7 +345,7 @@ window.openGdprInfo = function() {
 // Fonction appelée par le bouton "J'ai compris"
 window.acceptGdprInfo = function() {
     // Enregistrer l'acceptation (pour ne pas rouvrir si on garde le localStorage)
-    localStorage.setItem('hasAcceptedGdprInfo', 'true'); 
+    localStorage.setItem('hasAcceptedGdprInfo', 'true'); 
     // Fermer la modale
     document.getElementById('gdpr-info-overlay').classList.remove('active');
 };
