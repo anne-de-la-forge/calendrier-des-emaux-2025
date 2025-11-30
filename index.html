@@ -328,6 +328,27 @@
         }
 
       /* SECTION ATELIER (Gestion de l'image et du texte côte à côte) */
+        /* ... continue du bloc CSS de la section Atelier ... */
+
+        .differentiation-section h2 {
+            font-family: 'Playfair Display', serif; /* Réactive la belle police */
+            color: var(--primary-marine);
+            font-size: 2.2em;
+            margin-bottom: 1rem;
+            position: relative;
+            text-transform: uppercase;
+        }
+        .differentiation-section h2::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 2px;
+            background-color: var(--accent-gold); /* La ligne dorée */
+            margin: 10px auto 0;
+        }
+        
+        /* ... continue avec les autres styles pour .content-box, .atelier-image, etc. ... */
+        
         .differentiation-section {
             background-color: var(--light-bg);
             padding: 4rem 0;
@@ -352,7 +373,7 @@
         /* 🔑 CLÉ 2 : Style de l'Image */
         .differentiation-section .atelier-image {
             width: 35%; /* L'image prend 35% de la largeur */
-            height: 100%; /* L'image prend la hauteur du texte */
+            height: 80%; /* L'image prend 3/4 hauteur du texte */
             
             /* 🔑 CLÉ 3 : Rogner l'image si nécessaire */
             object-fit: cover; 
