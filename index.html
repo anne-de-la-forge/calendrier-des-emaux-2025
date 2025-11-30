@@ -124,7 +124,7 @@
             padding: 2rem 0;
             background-color: var(--light-bg);
             position: relative; 
-            z-index: 10;      
+            z-index: 10;     
         }
         
         /* Styles des Portes (QCM) */
@@ -161,7 +161,12 @@
             font-weight: bold;
             border: 4px solid var(--accent-gold);
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-            pointer-events: none; 
+            pointer-events: all; /* Important : réactive le clic */
+        }
+        .door:hover .door-front:not(.locked .door-front):not(.submitted .door-front) {
+            opacity: 0.9;
+            transform: scale(1.02);
+            transition: all 0.2s;
         }
 
         /* STYLE POUR LA PORTE APRÈS SOUMISSION (Affiche l'image/statut) */
@@ -204,20 +209,12 @@
             color: #4CAF50; /* Vert pour le succès */
             opacity: 0.9;
         }
-        /* ANCIEN STYLE (remplacé par .submitted-content et ses enfants) 
-        .door.submitted .door-front img {
-            max-width: 80%;
-            max-height: 80%;
-            margin: 0 auto;
-            object-fit: contain;
-            border-radius: 4px;
-        }
-        */
 
         .door.locked {
             filter: grayscale(80%);
             opacity: 0.7;
             cursor: not-allowed;
+            pointer-events: none; /* Empêche le clic sur les portes verrouillées */
         }
         .door-back {
             display: none; 
@@ -487,170 +484,8 @@
     </header>
 
     <section class="advent-calendar-section">
-        <div class="container advent-calendar-grid">
-            
-            <div class="door" data-day="1" id="day-1">
-                <div class="door-inner">
-                    <div class="door-front">1</div>
-                    <div class="door-back"></div>
-                </div>
+        <div class="container advent-calendar-grid" id="advent-calendar-grid">
             </div>
-
-            <div class="door" data-day="2" id="day-2">
-                <div class="door-inner">
-                    <div class="door-front">2</div>
-                    <div class="door-back"></div>
-                </div>
-            </div>
-            
-            <div class="door" data-day="3" id="day-3">
-                <div class="door-inner">
-                    <div class="door-front">3</div>
-                    <div class="door-back"></div>
-                </div>
-            </div>
-            
-            <div class="door" data-day="4" id="day-4">
-                <div class="door-inner">
-                    <div class="door-front">4</div>
-                    <div class="door-back"></div>
-                </div>
-            </div>
-            
-            <div class="door" data-day="5" id="day-5">
-                <div class="door-inner">
-                    <div class="door-front">5</div>
-                    <div class="door-back"></div>
-                </div>
-            </div>
-            
-            <div class="door" data-day="6" id="day-6">
-                <div class="door-inner">
-                    <div class="door-front">6</div>
-                    <div class="door-back"></div>
-                </div>
-            </div>
-            
-            <div class="door" data-day="7" id="day-7">
-                <div class="door-inner">
-                    <div class="door-front">7</div>
-                    <div class="door-back"></div>
-                </div>
-            </div>
-            
-            <div class="door" data-day="8" id="day-8">
-                <div class="door-inner">
-                    <div class="door-front">8</div>
-                    <div class="door-back"></div>
-                </div>
-            </div>
-            
-            <div class="door" data-day="9" id="day-9">
-                <div class="door-inner">
-                    <div class="door-front">9</div>
-                    <div class="door-back"></div>
-                </div>
-            </div>
-            
-            <div class="door" data-day="10" id="day-10">
-                <div class="door-inner">
-                    <div class="door-front">10</div>
-                    <div class="door-back"></div>
-                </div>
-            </div>
-            
-            <div class="door" data-day="11" id="day-11">
-                <div class="door-inner">
-                    <div class="door-front">11</div>
-                    <div class="door-back"></div>
-                </div>
-            </div>
-            
-            <div class="door" data-day="12" id="day-12">
-                <div class="door-inner">
-                    <div class="door-front">12</div>
-                    <div class="door-back"></div>
-                </div>
-            </div>
-            
-            <div class="door" data-day="13" id="day-13">
-                <div class="door-inner">
-                    <div class="door-front">13</div>
-                    <div class="door-back"></div>
-                </div>
-            </div>
-            
-            <div class="door" data-day="14" id="day-14">
-                <div class="door-inner">
-                    <div class="door-front">14</div>
-                    <div class="door-back"></div>
-                </div>
-            </div>
-            
-            <div class="door" data-day="15" id="day-15">
-                <div class="door-inner">
-                    <div class="door-front">15</div>
-                    <div class="door-back"></div>
-                </div>
-            </div>
-            
-            <div class="door" data-day="16" id="day-16">
-                <div class="door-inner">
-                    <div class="door-front">16</div>
-                    <div class="door-back"></div>
-                </div>
-            </div>
-
-            <div class="door" data-day="17" id="day-17">
-                <div class="door-inner">
-                    <div class="door-front">17</div>
-                    <div class="door-back"></div>
-                </div>
-            </div>
-            <div class="door" data-day="18" id="day-18">
-                <div class="door-inner">
-                    <div class="door-front">18</div>
-                    <div class="door-back"></div>
-                </div>
-            </div>
-            <div class="door" data-day="19" id="day-19">
-                <div class="door-inner">
-                    <div class="door-front">19</div>
-                    <div class="door-back"></div>
-                </div>
-            </div>
-            <div class="door" data-day="20" id="day-20">
-                <div class="door-inner">
-                    <div class="door-front">20</div>
-                    <div class="door-back"></div>
-                </div>
-            </div>
-            <div class="door" data-day="21" id="day-21">
-                <div class="door-inner">
-                    <div class="door-front">21</div>
-                    <div class="door-back"></div>
-                </div>
-            </div>
-            <div class="door" data-day="22" id="day-22">
-                <div class="door-inner">
-                    <div class="door-front">22</div>
-                    <div class="door-back"></div>
-                </div>
-            </div>
-            <div class="door" data-day="23" id="day-23">
-                <div class="door-inner">
-                    <div class="door-front">23</div>
-                    <div class="door-back"></div>
-                </div>
-            </div>
-            <div class="door" data-day="24" id="day-24">
-                <div class="door-inner">
-                    <div class="door-front">24</div>
-                    <div class="door-back"></div>
-                </div>
-            </div>
-
-        </div>
     </section>
 
     <section class="differentiation-section">
@@ -668,31 +503,7 @@
         <div class="door-popup-content">
             <a href="#" class="close-btn" onclick="closePopup()">&times;</a>
             <div id="popup-quiz-content">
-                <h4>Jour 1 : Quelle est la couleur de l'émail le plus couramment utilisé par AD Émaux ?</h4>
-                <img src="placeholder-quiz-image.webp" alt="Image du jour 1">
-                <p>Veuillez répondre à la question et entrer votre email pour participer au tirage au sort !</p>
-
-                <form class="quiz-form" action="#" method="POST">
-                    <div class="quiz-options">
-                        <label><input type="radio" name="reponse" value="A" required> Réponse A : Bleu Marine</label>
-                        <label><input type="radio" name="reponse" value="B"> Réponse B : Vert Sapin</label>
-                        <label><input type="radio" name="reponse" value="C"> Réponse C : Rouge Carmin</label>
-                    </div>
-
-                    <input type="email" name="email" placeholder="Votre adresse e-mail" required>
-                    
-                    <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off">
-
-                    <div class="rgpd-checkbox-container">
-                        <input type="checkbox" id="rgpd" name="rgpd" required>
-                        <label for="rgpd">J'accepte le <a href="#" onclick="openReglement(event)">règlement du jeu</a> et les conditions de traitement de mes données personnelles (RGPD).</label>
-                    </div>
-
-                    <button type="submit" class="btn-submit">Valider ma Réponse</button>
-                    <small>Une seule participation par jour et par adresse e-mail est autorisée.</small>
-                </form>
-
-            </div>
+                </div>
         </div>
     </div>
 
@@ -737,57 +548,215 @@
     </footer>
 
     <script>
-        // Fonctionnalité pour ouvrir la pop-up du règlement
+        // --- 1. STRUCTURE DES DONNÉES DU QUIZ ---
+        // Ajoutez ici les questions, réponses et images pour chaque jour.
+        // C'est un tableau, l'index 0 correspond au Jour 1, l'index 1 au Jour 2, etc.
+        const quizData = [
+            {
+                day: 1,
+                question: "Jour 1 : Quelle est la couleur de l'émail le plus couramment utilisé par AD Émaux ?",
+                image: "placeholder-quiz-image-1.webp", // REMPLACER AVEC VOS IMAGES
+                options: [
+                    { value: "A", text: "Réponse A : Bleu Marine" },
+                    { value: "B", text: "Réponse B : Vert Sapin" },
+                    { value: "C", text: "Réponse C : Rouge Carmin" }
+                ],
+                correctAnswer: "A" 
+            },
+            {
+                day: 2,
+                question: "Jour 2 : À quelle température l'émail est-il fusionné sur le métal ?",
+                image: "placeholder-quiz-image-2.webp",
+                options: [
+                    { value: "A", text: "Réponse A : Environ 450°C" },
+                    { value: "B", text: "Réponse B : Environ 850°C" },
+                    { value: "C", text: "Réponse C : Environ 100°C" }
+                ],
+                correctAnswer: "B" 
+            },
+            // Dupliquez et modifiez ce bloc pour les jours 3 à 24
+            { day: 3, question: "Jour 3 : Question..." /* ... */ },
+            { day: 4, question: "Jour 4 : Question..." /* ... */ },
+            { day: 5, question: "Jour 5 : Question..." /* ... */ },
+            { day: 6, question: "Jour 6 : Question..." /* ... */ },
+            { day: 7, question: "Jour 7 : Question..." /* ... */ },
+            { day: 8, question: "Jour 8 : Question..." /* ... */ },
+            { day: 9, question: "Jour 9 : Question..." /* ... */ },
+            { day: 10, question: "Jour 10 : Question..." /* ... */ },
+            { day: 11, question: "Jour 11 : Question..." /* ... */ },
+            { day: 12, question: "Jour 12 : Question..." /* ... */ },
+            { day: 13, question: "Jour 13 : Question..." /* ... */ },
+            { day: 14, question: "Jour 14 : Question..." /* ... */ },
+            { day: 15, question: "Jour 15 : Question..." /* ... */ },
+            { day: 16, question: "Jour 16 : Question..." /* ... */ },
+            { day: 17, question: "Jour 17 : Question..." /* ... */ },
+            { day: 18, question: "Jour 18 : Question..." /* ... */ },
+            { day: 19, question: "Jour 19 : Question..." /* ... */ },
+            { day: 20, question: "Jour 20 : Question..." /* ... */ },
+            { day: 21, question: "Jour 21 : Question..." /* ... */ },
+            { day: 22, question: "Jour 22 : Question..." /* ... */ },
+            { day: 23, question: "Jour 23 : Question..." /* ... */ },
+            { day: 24, question: "Jour 24 : Question..." /* ... */ },
+        ];
+
+
+        // --- 2. FONCTIONS DE GESTION DES POP-UPS ---
+
+        // Règlement (OK)
         function openReglement(event) {
             if (event) {
-                event.preventDefault(); // Empêche le comportement de lien par défaut
+                event.preventDefault(); 
             }
             document.getElementById('reglement-popup').classList.add('active');
-            // Fermer l'éventuelle pop-up du quiz si elle est ouverte
             document.getElementById('quiz-popup').classList.remove('active');
         }
-
-        // Fonctionnalité pour fermer la pop-up du règlement
         function closeReglement() {
             document.getElementById('reglement-popup').classList.remove('active');
         }
 
-        // Fonctionnalité pour ouvrir la pop-up du quiz (à connecter aux portes)
+        // Quiz (AJOUT DU CHARGEMENT DE CONTENU)
         function openPopup(day) {
-            // Logique pour charger le contenu du quiz pour 'day' (via AJAX ou données JS)
+            const data = quizData.find(q => q.day == day);
+
+            if (!data) {
+                alert("Erreur: Contenu du quiz non trouvé pour le jour " + day);
+                return;
+            }
+
+            const contentElement = document.getElementById('popup-quiz-content');
+            let optionsHTML = data.options.map(opt => `
+                <label>
+                    <input type="radio" name="reponse" value="${opt.value}" required> 
+                    ${opt.text}
+                </label>
+            `).join('');
+
+            // Construction du contenu HTML du quiz
+            contentElement.innerHTML = `
+                <h4>${data.question}</h4>
+                <img src="${data.image}" alt="Image du jour ${data.day}">
+                <p>Veuillez répondre à la question et entrer votre email pour participer au tirage au sort !</p>
+
+                <form class="quiz-form" id="quiz-form-day-${data.day}" action="#" method="POST">
+                    <input type="hidden" name="day" value="${data.day}">
+                    <div class="quiz-options">
+                        ${optionsHTML}
+                    </div>
+
+                    <input type="email" name="email" placeholder="Votre adresse e-mail" required>
+                    
+                    <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off">
+
+                    <div class="rgpd-checkbox-container">
+                        <input type="checkbox" id="rgpd-day-${data.day}" name="rgpd" required>
+                        <label for="rgpd-day-${data.day}">J'accepte le <a href="#" onclick="openReglement(event)">règlement du jeu</a> et les conditions de traitement de mes données personnelles (RGPD).</label>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Valider ma Réponse</button>
+                    <small>Une seule participation par jour et par adresse e-mail est autorisée.</small>
+                </form>
+            `;
+            
+            // Gestion de l'envoi du formulaire (simulé ici)
+            document.getElementById(`quiz-form-day-${data.day}`).addEventListener('submit', function(e) {
+                e.preventDefault();
+                simulateSubmission(data.day); // Fonction de simulation
+            });
+
             document.getElementById('quiz-popup').classList.add('active');
             console.log('Ouverture du quiz pour le jour:', day);
         }
 
-        // Fonctionnalité pour fermer la pop-up du quiz
         function closePopup() {
             document.getElementById('quiz-popup').classList.remove('active');
         }
 
-        // Exemple de gestion des clics sur les portes (Nécessite une implémentation complète en JS pour la gestion des dates, soumissions, etc.)
-        document.querySelectorAll('.door').forEach(door => {
-            door.addEventListener('click', function() {
-                const day = this.getAttribute('data-day');
-                // Vous devez implémenter ici la logique pour vérifier si la date est correcte (non "locked") et si la porte a déjà été "submitted".
-                if (!this.classList.contains('locked') && !this.classList.contains('submitted')) {
-                    openPopup(day);
-                } else {
-                    console.log(`Le jour ${day} est verrouillé ou déjà répondu.`);
+
+        // --- 3. LOGIQUE DU CALENDRIER ET DES PORTES ---
+
+        // SIMULATION de la soumission (à remplacer par votre code serveur)
+        function simulateSubmission(day) {
+            alert(`Réponse enregistrée pour le Jour ${day} ! (Ceci est une simulation. Intégrez votre code serveur ici.)`);
+            closePopup();
+            
+            // Met à jour la porte pour afficher le statut "submitted"
+            const door = document.getElementById(`day-${day}`);
+            if (door) {
+                door.classList.add('submitted');
+                const doorFront = door.querySelector('.door-front');
+                if (doorFront) {
+                    // Supprimer le numéro et afficher l'image de prévisualisation + texte
+                    doorFront.innerHTML = `
+                        <div class="submitted-content">
+                            <img src="${quizData.find(q => q.day == day).image}" class="submitted-preview-img" alt="Aperçu Jour ${day}">
+                            <small>RÉPONDU</small>
+                        </div>
+                    `;
+                }
+            }
+        }
+
+
+        // Initialisation de l'état du calendrier et ajout des écouteurs d'événements
+        function initCalendar() {
+            const today = new Date();
+            // Définir l'année et le mois du calendrier de l'avent (ex: 2025, décembre=11)
+            const adventYear = today.getFullYear();
+            const adventMonth = 11; // Décembre est le mois 11 (0=Janvier)
+
+            const grid = document.getElementById('advent-calendar-grid');
+            const doors = [];
+
+            for (let i = 1; i <= 24; i++) {
+                const day = i;
+                const door = document.createElement('div');
+                door.className = 'door';
+                door.id = `day-${day}`;
+                door.setAttribute('data-day', day);
+
+                const doorInner = document.createElement('div');
+                doorInner.className = 'door-inner';
+                doorInner.innerHTML = `<div class="door-front">${day}</div><div class="door-back"></div>`;
+                door.appendChild(doorInner);
+                
+                // 1. Logique de VERROUILLAGE (Locked)
+                const doorDate = new Date(adventYear, adventMonth, day);
+                // Si la date de la porte est après AUJOURD'HUI, elle est verrouillée
+                if (doorDate.getTime() > today.getTime()) {
+                    door.classList.add('locked');
+                }
+                
+                // 2. Écouteur de clic (pour ouvrir la pop-up)
+                door.addEventListener('click', function() {
+                    if (!this.classList.contains('locked') && !this.classList.contains('submitted')) {
+                        openPopup(day);
+                    } else {
+                        // Optionnel: Afficher un message si la porte est verrouillée
+                        console.log(`Le jour ${day} est verrouillé ou déjà répondu.`);
+                    }
+                });
+
+                doors.push(door);
+                grid.appendChild(door);
+            }
+        }
+
+        // --- 4. EXÉCUTION AU CHARGEMENT DE LA PAGE ---
+        document.addEventListener('DOMContentLoaded', () => {
+            initCalendar();
+
+            // Fermeture des popups en cliquant à l'extérieur
+            document.getElementById('quiz-popup').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closePopup();
                 }
             });
-        });
-        
-        // Fermeture des popups en cliquant à l'extérieur
-        document.getElementById('quiz-popup').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closePopup();
-            }
-        });
 
-        document.getElementById('reglement-popup').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeReglement();
-            }
+            document.getElementById('reglement-popup').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeReglement();
+                }
+            });
         });
 
     </script>
