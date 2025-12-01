@@ -78,7 +78,7 @@ const qcmData = [
         day: 7,
         title: "Au Cœur du Cadeau",
         question: "Quelle est l'une des valeurs d'un cadeau réalisé par un Artisan d'Art ?",
-        image: "Sculpture-Breaking-Wave.jpg",
+        image: "jour  7 - valeur cadeau.JPG",
         options: [
             { text: "A. Son prix élevé", value: "A" },
             { text: "B. Le packaging luxueux", value: "B" },
@@ -90,7 +90,7 @@ const qcmData = [
         day: 8,
         title: "Le Métal Privilégié",
         question: "Quel métal est presque toujours utilisé comme support par Anne de la Forge pour l'émaillage chaud ?",
-        image: "SOSSUVLEI-Anne-de-La-Forge.jpg",
+        image: "jour 8 -metal.JPG",
         options: [
             { text: "A. L'aluminium", value: "A" },
             { text: "B. Le titane", value: "B" },
