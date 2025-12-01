@@ -29,7 +29,7 @@ const qcmData = [
     {
         day: 3,
         title: "Un Partenariat Textile",
-        question: "Avec quel type d'artisan d'art, Anne de la Forge a-t-elle collaboré pour réaliser des co-créations dans le domaine du textile ?",
+        question: "Avec lequel de ces artisans , Anne de la Forge, a-telle travaillé sur ce projet ?",
         image: "564629110_18556304542016266_5969967451891582940_nlow.webp",
         options: [
             { text: "A. Un Céramiste", value: "A" },
@@ -40,15 +40,15 @@ const qcmData = [
     },
     {
         day: 4,
-        title: "Lumière et Émail",
-        question: "En collaboration avec des designers, les créations d'Anne de la Forge se sont étendues aux luminaires. Quel format de luminaire est le plus souvent co-créé ?",
-        image: "lampes3-luminaires.jpg",
+        title: "Lumière émaillée",
+        question: "Parmi mes luminaires, lequel a-t-il été co-créé en dernier ?",
+        image: "jour 4 -appliques murales.jpg",
         options: [
-            { text: "A. Des lustres en cristal", value: "A" },
+            { text: "A. Des appliques murales", value: "A" },
             { text: "B. Des lampadaires sur pied", value: "B" },
-            { text: "C. Des appliques murales ou des îlots modulaires", value: "C" }
+            { text: "C. Des lustres en cristal", value: "C" }
         ],
-        correctAnswer: "C"
+        correctAnswer: "A"
     },
     {
         day: 5,
