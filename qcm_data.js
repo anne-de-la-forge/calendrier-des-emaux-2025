@@ -88,20 +88,20 @@ const qcmData = [
     },
     {
         day: 8,
-        title: "Le Métal Privilégié",
-        question: "Quel métal est presque toujours utilisé comme support par Anne de la Forge pour l'émaillage chaud ?",
+        title: "La matière sous l’émail",
+        question: "Sur quel métal sont émaillées les créations d'Anne de la Forge ?",
         image: "jour 8 -metal.JPG",
         options: [
-            { text: "A. L'aluminium", value: "A" },
-            { text: "B. Le titane", value: "B" },
-            { text: "C. Le cuivre", value: "C" }
+            { text: "A. L'or", value: "A" },
+            { text: "B. Le cuivre", value: "B" },
+            { text: "C. Le laiton", value: "C" }
         ],
-        correctAnswer: "C"
+        correctAnswer: "B"
     },
     {
         day: 9,
-        title: "Reconnaissance Professionnelle",
-        question: "Anne de La Forge est membre d'Ateliers d'Art de France. Quelle est leur mission principale ?",
+        title: "Se Rassembler",
+        question: "Anne de La Forge est membre des Ateliers d'Art de France. Quelle est leur mission principale ?",
         image: "ateliers-dart-de-france-page-network.jpg",
         options: [
             { text: "A. Organiser des compétitions sportives", value: "A" },
