@@ -32,10 +32,10 @@ function getCurrentDay() {
     const month = now.getMonth() + 1;
     const year = now.getFullYear();
     
-    if (month === 12 && year === 2024) {
+    if (month === 12 && year === 2025) {
         return day;
     }
-    else if (year > 2024 || (year === 2024 && month > 12)) {
+    else if (year > 2025 || (year === 2025 && month > 12)) {
         return 26;
     }
     else {
