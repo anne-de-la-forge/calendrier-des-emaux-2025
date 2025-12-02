@@ -197,7 +197,7 @@ const qcmData = [
     {
         day: 17,
         title: "Lumière & texture",
-        question: "Les empreinte de Galuchat de GK-designs sont...",
+        question: "Collaboration : les empreinte de Galuchat par GK-designs sont...",
         image: "jour 17 - lumieres et textures @Anne de la Forge.jpg",
         options: [
             { text: "A. Des empreintes de peau de caïman", value: "A" },
@@ -208,39 +208,39 @@ const qcmData = [
     },
     {
         day: 18,
-        title: "L'Outil le Plus Précis",
-        question: "Quel outil est indispensable pour le travail de précision dans l'application des poudres d'émail ?",
-        image: "ateliers-decouverte-emaux.jpg",
+        title: "Les infinies nuances",
+        question: "Pourquoi deux pièces émaillées de la même couleur peuvent-elles être légèrement différentes ?",
+        image: "jour 18.jpg",
         options: [
-            { text: "A. L'entonnoir à poudre", value: "A" },
-            { text: "B. Le four", value: "B" },
-            { text: "C. La spatule ou le tamis fin pour le travail délicat des poudres", value: "C" }
+            { text: "A. Parce qu'il peut y avoir des variations de température et de quantité de matière", value: "A" },
+            { text: "B. Parce que les pigments changent selon l'hydrométrie", value: "B" },
+            { text: "C. Parce que le cuivre absorbe plus ou moins la couleur selon sa composition", value: "C" }
         ],
-        correctAnswer: "C"
+        correctAnswer: "A"
     },
     {
         day: 19,
-        title: "La Fusion de l'Orfèvrerie",
-        question: "Quel est l'objectif principal de la cuisson à haute température des poudres de verre sur le support métallique ?",
-        image: "572398431_18560670844016266_109912061020564552_nthumb.webp",
+        title: "Paravent Ornament",
+        question: "Combien de pièces émaillées ont été réalisées pour le paravent de Marion Stora ?",
+        image: "jour 19 paravent.jpg",
         options: [
-            { text: "A. Pour obtenir des surfaces très brillantes et lisses", value: "A" },
-            { text: "B. Pour que la poudre de verre fusionne et devienne un émail solide et coloré", value: "B" },
-            { text: "C. Pour réduire le poids de la pièce", value: "C" }
+            { text: "A. 48 pièces émaillées", value: "A" },
+            { text: "B. 62 pièces émaillées", value: "B" },
+            { text: "C. 76 pièces émaillées", value: "C" }
         ],
         correctAnswer: "B"
     },
     {
         day: 20,
-        title: "Le Temps de Création",
-        question: "Combien de temps faut-il pour créer une pièce d'émail unique et complexe ?",
-        image: "ARCHIPEL-Anne-de-La-FORGE-1.jpg",
+        title: "Le chant du four",
+        question: "Comment sait-on qu’une pièce est prête à sortir du four ?",
+        image: "jour 20 - le chant du four - Marion Saupin 2025-82.JPG",
         options: [
-            { text: "A. Quelques heures (grâce aux machines)", value: "A" },
-            { text: "B. Quelques jours (pour les petites pièces)", value: "B" },
-            { text: "C. Plusieurs semaines voire plusieurs mois", value: "C" }
+            { text: "A. Dès que la couleur devient rouge", value: "A" },
+            { text: "B. L’émail est lisse et brillant", value: "B" },
+            { text: "C. Quand le minuteur sonne après 2 minutes", value: "C" }
         ],
-        correctAnswer: "C"
+        correctAnswer: "B"
     },
     {
         day: 21,
