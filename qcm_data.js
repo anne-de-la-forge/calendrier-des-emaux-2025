@@ -28,8 +28,8 @@ const qcmData = [
     },
     {
         day: 3,
-        title: "Un Partenariat Textile",
-        question: "Avec lequel de ces artisans , Anne de la Forge, a-t-elle travaillé sur ce projet ?",
+        title: "Douceur textile",
+        question: "Avec lequel de ces artisans, ai-je travaillé sur le projet de Léa Zeroil pour le cabinet OUD ?",
         image: "564629110_18556304542016266_5969967451891582940_nlow.webp",
         options: [
             { text: "A. Un Céramiste", value: "A" },
@@ -40,15 +40,15 @@ const qcmData = [
     },
     {
         day: 4,
-        title: "Lumière émaillée",
-        question: "Parmi mes luminaires, lequel a-t-il été co-créé en dernier ?",
-        image: "jour 4 -appliques murales.jpg",
+        title: "Murmures d'écume",
+        question: "Quelle est la matière qui recouvre les pièces blanches Écumes ?",
+        image: "jour 4 _Écume  @Anne de La Forge mom.jpg",
         options: [
-            { text: "A. Des appliques murales", value: "A" },
-            { text: "B. Des lampadaires sur pied", value: "B" },
-            { text: "C. Des lustres en cristal", value: "C" }
+            { text: "A. Un émail blanc spécifique par sa texture", value: "A" },
+            { text: "B. Un émail blanc d'orfèvre", value: "B" },
+            { text: "C. Un émail blanc de céramiste", value: "C" }
         ],
-        correctAnswer: "A"
+        correctAnswer: "B"
     },
     {
         day: 5,
@@ -244,51 +244,51 @@ const qcmData = [
     },
     {
         day: 21,
-        title: "L'Inspiration Naturelle",
-        question: "Quelles sont les principales sources d'inspiration des motifs et des couleurs des émaux d'Anne de la Forge ?",
-        image: "ecume.jpg",
+        title: "Le bronze enchanté",
+        question: "Dans les poignées créées avec les frères Rietsch pour le décorateur Alexandre Nicola, comment l’émail est-il intégré au bronze ?",
+        image: "jour 21 bronze et email.jpg",
         options: [
-            { text: "A. Les villes modernes et l'architecture", value: "A" },
-            { text: "B. Le cosmos et les galaxies lointaines", value: "B" },
-            { text: "C. Les éléments naturels (eau, roche, ciel)", value: "C" }
+            { text: "A. L’émail est injecté à chaud dans le bronze", value: "A" },
+            { text: "B. L’émail est appliqué sur le bronze et vitrifié", value: "B" },
+            { text: "C. Le bronze est façonné pour sertir l’émail", value: "C" }
         ],
         correctAnswer: "C"
     },
     {
         day: 22,
-        title: "Le Geste Unique",
-        question: "Quelle est la signature qui rend chaque création absolument unique et sans équivalent ?",
-        image: "573705153_18562573573016266_5788673195324190255_nthumb.webp",
+        title: "Les secondes qui comptent",
+        question: "Que se passe-t-il si une pièce reste trop longtemps au four ?",
+        image: "jour 22 - Marion Saupin 2025-96.JPG",
         options: [
-            { text: "A. Une machine automatique", value: "A" },
-            { text: "B. L'impression 3D", value: "B" },
-            { text: "C. Le travail manuel (chaque pièce est unique et irremplaçable)", value: "C" }
+            { text: "A. Elle brûle", value: "A" },
+            { text: "B. Le cuivre fond et se liquéfie comme de la lave", value: "B" },
+            { text: "C. L’émail se renforce et devient quasiment incassable", value: "C" }
         ],
-        correctAnswer: "C"
+        correctAnswer: "A"
     },
     {
         day: 23,
-        title: "Parcours d’Artiste",
-        question: "Avant de se consacrer à l’émaillage d’art, quelle profession exerçait Anne de la Forge ?",
-        image: "Ecumes-pieces-aimantees-Anne-de-La-FORGE-copie.jpg",
+        title: "Avant le feu, il y avait…",
+        question: "Quelle était ma profession avant de devenir émailleur ?",
+        image: "jour 23 - Marion Saupin 2025-101.JPG",
         options: [
-            { text: "A. Restauratrice de meubles anciens", value: "A" },
-            { text: "B. Juriste", value: "B" },
+            { text: "A. Chimiste", value: "A" },
+            { text: "B. Restauratrice d’œuvres d’art", value: "B" },
             { text: "C. Architecte d'intérieure", value: "C" }
         ],
         correctAnswer: "C"
     },
     {
         day: 24,
-        title: "Le Secret d'AD Émaux",
-        question: "Quel est l'ingrédient secret qui garantit la valeur et l'authenticité de chaque pièce d'émail ?",
-        image: "Totems-bouleaux-Anne-de-La-Forge-.jpg",
+        title: "La magie de l'émail",
+        question: "Que fait  la lumière lorsqu’elle rencontre l’émail ?",
+        image: "jour 24  - Marion Saupin 2025-95.JPG",
         options: [
-            { text: "A. La production en série", value: "A" },
-            { text: "B. L'utilisation de la robotisation", value: "B" },
-            { text: "C. Le temps et l'âme que l'artiste investit dans chaque pièce", value: "C" }
+            { text: "A. Elle lui donne vie", value: "A" },
+            { text: "B. Elle s’éteint au contact du cuivre", value: "B" },
+            { text: "C. Elle modifie sa couleur", value: "C" }
         ],
-        correctAnswer: "C"
+        correctAnswer: "A"
     },
     // 🎁 ENTRÉE POUR LE JOUR 25 🎁
     {
