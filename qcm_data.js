@@ -112,97 +112,97 @@ const qcmData = [
     },
     {
         day: 10,
-        title: "Co-création de Mobilier",
-        question: "Le concept de Duos et Dialogues permet de réunir son savoir-faire avec celui d'un autre artisan d'art. Quel métier pratique l'artisan d'art avec qui j'ai réalisé des guéridons ?",
+        title: "Dialoguer avec d'autres matières",
+        question: "Le concept de Duos  permet de réunir des savoir-faire. Quel métier pratique l'autre artisan d'art de ce guéridon?",
         image: "gueridon.jpeg",
         options: [
             { text: "A. La Bijouterie", value: "A" },
             { text: "B. Le Design Culinaire", value: "B" },
-            { text: "C. L'Ébénisterie (travail du bois)", value: "C" }
+            { text: "C. L'Ébénisterie d'art", value: "C" }
         ],
         correctAnswer: "C"
     },
     {
         day: 11,
-        title: "Le Grand Format II",
-        question: "La création murale BELHARRA a été présentée lors d'un événement par quelle experte en tendances ?",
-        image: "sculpture.png",
+        title: "Voyage au cœur d’Archipel",
+        question: "Combien d’îles composent l’œuvre Archipel dans sa version complète 2025?",
+        image: "jour 11 -Archipel.jpg",
         options: [
-            { text: "A. Clotilde la Blogueuse Mode", value: "A" },
-            { text: "B. Gaston le Critique Gastronomique", value: "B" },
-            { text: "C. Elizabeth Leriche du Bureau de style", value: "C" }
+            { text: "A. 6  îles", value: "A" },
+            { text: "B. 14  îles", value: "B" },
+            { text: "C. 21  îles", value: "C" }
         ],
-        correctAnswer: "C"
+        correctAnswer: "A"
     },
     {
         day: 12,
-        title: "Les Hautes Températures",
-        question: "À quelle température (nécessaire à la fusion du verre et du métal) environ se fait la fusion de l'émail sur le cuivre ?",
-        image: "ARCHIPEL-3-Anne-de-La-FORGE.jpg",
+        title: "L’instant où tout bascule",
+        question: "Combien de temps reste une pièce dans le four ?",
+        image: "jour 12- Marion Saupin 2025-92.JPG",
         options: [
-            { text: "A. 400°C", value: "A" },
-            { text: "B. 800°C", value: "B" },
-            { text: "C. 1200°C", value: "C" }
+            { text: "A. Quelques minutes seulement", value: "A" },
+            { text: "B. Une heure entière", value: "B" },
+            { text: "C. Une demi-journée", value: "C" }
         ],
-        correctAnswer: "B"
+        correctAnswer: "A"
     },
     {
         day: 13,
-        title: "L'Étape Essentielle",
-        question: "Quelle est l'étape qui transforme le verre coloré en poudre en une couche d'émail solide, lisse et brillante ?",
-        image: "image-jour-13-email-avant-apres.jpg",
+        title: "Ecorces cristallines",
+        question: "Qu’est-ce qui caractérise les totems « bouleaux »  ?",
+        image: "Totems-bouleaux-Anne-de-La-Forge-.jpg",
         options: [
-            { text: "A. Le bain dans l'eau glacée", value: "A" },
-            { text: "B. Le polissage final", value: "B" },
-            { text: "C. La cuisson qui révèle les couleurs et les motifs uniques", value: "C" }
-        ],
-        correctAnswer: "C"
-    },
-    {
-        day: 14,
-        title: "Composition",
-        question: "En termes de composition, à quelle matière l'émail sur cuivre est-il le plus étroitement lié ?",
-        image: "detail.jpg",
-        options: [
-            { text: "A. La céramique", value: "A" },
-            { text: "B. Le verre", value: "B" },
-            { text: "C. Le plastique", value: "C" }
+            { text: "A. Ce sont des poteaux techniques destinés à suspendre des luminaires", value: "A" },
+            { text: "B. Ils sont réalisés à l'aiguille et au pinceau", value: "B" },
+            { text: "C. Ils représentent des colonnes antiques", value: "C" }
         ],
         correctAnswer: "B"
     },
     {
-        day: 15,
-        title: "Le Secret de la Couleur",
-        question: "De quoi est composée la poudre d'émail utilisée avant la cuisson ?",
-        image: "pigments.jpg",
+        day: 14,
+        title: "L’envers qui protège l’endroit",
+        question: "Pourquoi contre-émailler (émailler le dos d’une pièce)?",
+        image: "jour 14 - Marion Saupin 2025-3.JPG",
         options: [
-            { text: "A. De l'eau boueuse séchée", value: "A" },
-            { text: "B. Du métal trempé", value: "B" },
-            { text: "C. De la poudre de verre très fine, pigmentée par des oxydes métalliques", value: "C" }
+            { text: "A. Pour équilibrer les tensions entre les deux faces", value: "A" },
+            { text: "B. Pour empêcher le cuivre de s’oxyder au contact de l’air", value: "B" },
+            { text: "C. Pour accélérer la cuisson en chauffant les deux côtés", value: "C" }
+        ],
+        correctAnswer: "A"
+    },
+    {
+        day: 15,
+        title: "Méandres Vénitiens",
+        question: "Lors de la Biennale Homo Faber à Venise, qu'est devenue la pièce Méandres Vénitiens ?",
+        image: "jour 15 - meandres venitiens@ Anne de La Forge.jpg",
+        options: [
+            { text: "A. Elle a été remise en trophée lors de la cérémonie de clôture", value: "A" },
+            { text: "B. Elle a été prêtée au Teatro La Fenice", value: "B" },
+            { text: "C. Elle a quitté l’exposition sur la gondole d'un collectionneur", value: "C" }
         ],
         correctAnswer: "C"
     },
     {
         day: 16,
-        title: "L'International II (Voyage)",
-        question: "Anne de la Forge a réalisé une œuvre pour un client de luxe à Genève, dans le secteur de :",
-        image: "bleu.jpg",
+        title: "Le maître du feu",
+        question: "À quelle température les pièces passent-elles au four?",
+        image: "jour 16 - Marion Saupin 2025-84.JPG",
         options: [
-            { text: "A. La Maroquinerie", value: "A" },
-            { text: "B. La Haute Joaillerie", value: "B" },
-            { text: "C. L'Horlogerie", value: "C" }
+            { text: "A. Entre 450 °C et 550 °C", value: "A" },
+            { text: "B. Autour de 850 °C", value: "B" },
+            { text: "C. À 1 200 °C", value: "C" }
         ],
-        correctAnswer: "C"
+        correctAnswer: "B"
     },
     {
         day: 17,
-        title: "L'Inspiration Spatiale",
-        question: "La Collection Terres Messagères, qui capture la beauté et la vulnérabilité de la Terre, est inspirée par les photographies de Tom Hegen et d'un célèbre...",
-        image: "emaux-sur-cuivre.jpg",
+        title: "Lumière & texture",
+        question: "Les empreinte de Galuchat de GK-designs sont...",
+        image: "jour 17 - lumieres et textures @Anne de la Forge.jpg",
         options: [
-            { text: "A. Explorateur polaire", value: "A" },
-            { text: "B. Biologiste marin", value: "B" },
-            { text: "C. Astronaute", value: "C" }
+            { text: "A. Des empreintes de peau de caïman", value: "A" },
+            { text: "B. Des empreintes de  peau de morue", value: "B" },
+            { text: "C. Des empreintes de peau de raie (ou de requin)", value: "C" }
         ],
         correctAnswer: "C"
     },
